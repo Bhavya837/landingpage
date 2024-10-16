@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoThermo</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="abthead">
+        <nav
+            class="navbar navbar-expand-sm navbar-light bg-light"
+        >
+            <div class="container">
+                <a class="navbar-brand navlogo" href="#">
+                <img src="assets/logoround4.jpg" alt="">
+                    <span style="color: #1976D2; padding-right: 0px; margin-right: 0px;">Eco<span style="color: #81C784; padding-left: 0px; margin-left: 0px;">Thermo</span>
+                </span>
+                   
+                </a>
+                <button
+                class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navcollapse"
+                aria-controls="navcollapse"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navcollapse">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="price.html">Pricing</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex my-2 my-lg-0">
+                        <button data-bs-target="#modalreg" data-bs-toggle="modal"
+                            class="btn  my-2 my-sm-0"
+                            type="button"
+                        >
+                           Get yours now
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <div class="modal  fade" id="modalreg" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="regform" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered  modalwidth" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="regform" style="color: #1976D2;">Buy Now!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">  
+                    <form action=""  onsubmit="return check()" method="post">
+                        <div class="form-floating mb-2">
+                            <input type="text"  name="Name" placeholder="Enter name" class="form-control" id="namevalid">
+                            <label for="" class="form-label">Enter name </label>
+                        </div>
+                        <p id="nameError" class="text-danger ml-20"></p>
+                        <div class="form-floating mb-2">
+                            <input type="email"  name="email" placeholder="Enter email" class="form-control" > 
+                            <label for="" class="form-label">Enter Email </label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="tel"  name="Phone num" placeholder="Enter Phone number" class="form-control" id="phnvalid">
+                            <label for="" class="form-label">Enter mobile number </label>
+                        </div>
+                        <p id="phnError" class="text-danger ml-20"></p>
+                        <select name="" id="" class="form-select mb-2">
+                            <option value="" hidden>Choose your plan</option>
+                            <option value="">Basic plan</option>
+                            <option value="">Premium plan</option>
+                            <option value="">Pro plan</option>
+                        </select>
+                        <button
+                            type="submit"
+                            class="btn form-control mb-2"
+                            id="btnvalid"
+                        >
+                            Submit
+                        </button>
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div> 
+   <!-- <section class="about-hero">
+        <div class="container">
+            <div class="hero-row">
+                <div class="hero-text">
+                    <h1>About EcoThermo</h1>
+                    <p>Smart Energy Solutions for a Sustainable Future</p>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/aboutimg.webp" alt="Smart Home Tech Image">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="our-mission">
+        <div class="container">
+            <div class="mission-row">
+                <div class="mission-text">
+                    <h2>Our Mission</h2>
+                    <p>At EcoThermo, we are committed to providing smart energy solutions that reduce energy consumption, lower costs, and promote sustainability. Our smart thermostat learns your schedule, adjusts automatically, and helps you save both energy and money.</p>
+                </div>
+                <div class="mission-image">
+                    <img src="assets/aboutimg.webp" alt="EcoThermo Mission Image">
+                </div>
+            </div>
+        </div>
+    </section>
+  <!--  <section class="our-values">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-box">
+                    <img src="assets/sustain.jpeg" alt="Sustainability">
+                    <h3>Sustainability</h3>
+                    <p>We prioritize eco-friendly solutions that help reduce the carbon footprint.</p>
+                </div>
+                <div class="value-box">
+                    <img src="assets/Innovation.jpeg" alt="Innovation">
+                    <h3>Innovation</h3>
+                    <p>We strive to bring the latest technological advancements to our customers.</p>
+                </div>
+                <div class="value-box">
+                    <img src="assets/efficiency.jpeg" alt="Efficiency">
+                    <h3>Efficiency</h3>
+                    <p>Our products are designed to save energy without compromising on performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+    <section class="values">
+        <div class="value-item">
+            <img src="assets/sustain.jpeg" alt="Sustainability">
+            <div class="value-content">
+                <h3>Sustainability</h3>
+                <p>We are committed to creating energy-efficient solutions for a greener future.</p>
+            </div>
+        </div>
+    
+        <div class="value-item reverse">
+            <img src="assets/Innovation.jpeg" alt="Innovation">
+            <div class="value-content">
+                <h3>Innovation</h3>
+                <p>Our smart technology transforms your home for better living and comfort.</p>
+            </div>
+        </div>
+    
+        <div class="value-item">
+            <img src="assets/efficiency.jpeg" alt="Energy Efficiency">
+            <div class="value-content">
+                <h3>Energy Efficiency</h3>
+                <p>Our thermostats save energy and lower your bills without compromising comfort.</p>
+            </div>
+        </div>
+    
+        <div class="value-item reverse">
+            <img src="assets/test4.jpeg" alt="Customer Focus">
+            <div class="value-content">
+                <h3>Customer Focus</h3>
+                <p>Your comfort and satisfaction are our top priorities. We're here to help.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="call-to-action">
+        <div class="container">
+            <h2>Join the EcoThermo Revolution</h2>
+            <p>Ready to embrace smarter, greener energy solutions? Explore our offerings and make the switch today!</p>
+            <a href="price.html" class="cta-btn">Choose Your Plan</a>
+        </div>
+    </section>
+    <footer>
+       
+        <div class="footer-top pt-20 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-about mt-20">
+                            <h4>EcoThermo</h4>
+                            <p class="mt-10">EcoThermo is committed to creating smart, sustainable energy solutions that save both energy and costs for a greener tomorrow.</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer-link mt-20">
+                            <h4 class="mb-10">Quick Links</h4>
+                            <ul class="mt-10">
+                                <li><a href="#" data-bs-target="#modalreg" data-bs-toggle="modal"><i class="bi bi-chevron-right"></i></i>Buy now</a></li>
+                                <li><a href="about.html"><i class="bi bi-chevron-right"></i></i>About</a></li>
+                                <li><a href="privacy.html"><i class="bi bi-chevron-right"></i></i>Privacy policy</a></li>
+                                <li><a href="refund.html"><i class="bi bi-chevron-right"></i></i>Refund Policy</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-address mt-20">
+                            <h4>Contact Us</h4>
+                            <ul class="mt-30 ms-0">
+                                <li>
+                                    <div class="icon flex">
+                                        <i class="bi bi-telephone-fill"></i>
+                                        <p>+91 81439 56849</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon flex">
+                                        <span><i class="bi bi-envelope-fill"></i></span>
+                                        <p>info@hyderabadittrainings.com</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+
+                        </div> 
+                    </div>
+                </div> 
+            </div> 
+        </div> 
+        
+        <div class="footer-copyright pt-10 pb-25">
+            <div class="container">
+                <div class="row rwomb">
+                    <div class="col-md-8">
+                        <div class="copyright text-md-left text-center pt-15">
+                            <p><span>&copy</span> Copyrights 2024 @ EcoTherma All rights reserved. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="copyright text-md-right text-center pt-15">
+                            <p>Designed by Bhavya Morampudi </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+   
+</footer>
+<script src="validate.js"></script>
+    
+    
+</body>
+</html>
